@@ -1,63 +1,48 @@
 #include <iostream>
+#include "declaration.h" //내가 만든 파일 안에서 불러오는건 큰따옴표, 라이브러리는 꺽쇠
+
+// int main()
+// {
+//     using namespace ChoEunhye2372048;
+//     int n{intputInteger()};
+//     int m{intputInteger()};
+//     std::cout << n << " + " << m << " = "
+//         <<addIntegers(n,m) <<std::endl;
+//     return 0;
+// }
+
+
+
+// void passVal(int val)
+// {
+//     val=20;
+//     std::cout << &val << " " << val << "\n";
+// }
+
+// void passRef(int & ref)
+// {
+//     ref=20;
+//     std::cout << &ref << " " << ref <<"\n";
+// }
+
+// int main()
+// {
+//     int n{10}; std::cout << &n << " " << n << "\n";
+//     passVal(n); std::cout << &n << " " << n << "\n";
+//     passRef(n); std::cout << &n << " " << n << "\n";
+// }
+
+
+
 int main()
 {
-    // "ctrl + /" : whole slash
+    using namespace ChoEunhye2372048;
 
+    student kim{1234567, 100, 'A'};
+    printStudent(kim);
 
-    // int numOfStudents{ 30 };
-    // numOfStudents = 22;
-    // std::cout << numOfStudents << std::endl; //'l'ine
-    // std::cout << sizeof(numOfStudents) <<std::endl;
-    // std::cout << typeid(numOfStudents).name() << std::endl;
-    // std::cout << typeid(static_cast<double>(numOfStudents)).name() << std::endl;
-    // return 0;
+    student lee{inputStudent()};
+    printStudent(lee);
 
-
-    // int n{2};
-    // std::cout << 2 * n++ <<std::endl;
-    // std::cout << n << std::endl;
-
-    // int m{2};
-    // std::cout << 2 * ++m << std::endl;
-    // std::cout << m << std::endl;
-
-
-    // std::cout << "Enter two integers : ";
-    // int x{}, y{}, z{};
-    // std::cin >> x >> y;
-    // z = x > y ? x : y; //if (x>y) z=x;
-    //                    // else z=y;
-    // std::cout<<z<<std::endl;
- 
-    
-    // std::cout<< "Enter 1,2 or 3: ";
-    // int x{};
-    // std::cin>>x;
-    // switch(x)
-    // {
-    //     case 1: std::cout << "one\n" ; break;
-    //     case 2: std::cout << "two\n" ; break;
-    //     case 3: std::cout << "three\n"; break;
-    //     default: std::cout << "unknown\n";
-    // }
-
-
-    // int i{1};
-    // const int end{10};
-    // // do
-    // {
-    //     std::cout << i << ' '; ++i;
-    // }while(i<=end);
-    // std::cout << std::endl;
-
-    // i=1;
-    // while (i <=end)
-    // {
-    //     std::cout << i << ' ';++i;
-    // }std::cout << std::endl;
-
-
-    // for( i=1; i<=end; ++i)
-    //     std::cout << i << ' ';++i;
-    // std::cout << std::endl;
+    return 0;
 }
